@@ -36,6 +36,9 @@ public class Car {
      */
     private DriveWheels driveWheels = DriveWheels.UNKNOWN;
 
+
+    //Конструкторы. На их примере видно использование полиморфизма с разными сигнатурами метода (перегрузка).
+
     public Car(String model) {
         this.model = model;
     }
@@ -77,4 +80,37 @@ public class Car {
     public void setDriveWheels(DriveWheels driveWheels) {
         this.driveWheels = driveWheels;
     }
+
+
+    //Методы. Тут тоже используется перегрузка методов.
+
+    /**
+     * Выводит в консоль всю информацию об автомобиле
+     */
+    public void printInfo() {
+        System.out.printf("Модель автомобиля - %s\n" + "Мощность двигателя - %d\n", model, power);
+        switch (driveWheels) {
+            case FRONT_WHEEL_DRIVE -> System.out.println("Привод - передний");
+            case REAR_WHEEL_DRIVE -> System.out.println("Привод - задний");
+            case ALL_WHEEL_DRIVE -> System.out.println("Привод - полный");
+            case UNKNOWN -> System.out.println("Привод - неизвестно");
+        }
+    }
+
+    /**
+     * Выводит в консоль необходимое количество информации об автомобиле:
+     *
+     * @param n 1 - только название,
+     *          2 - название и мощность,
+     *          3 - название, мощность и тип привода.
+     */
+    public void printInfo(int n) {
+        switch (n) {
+            case 1 -> System.out.printf("Модель автомобиля - %s\n", model);
+            case 2 -> System.out.printf("Модель автомобиля - %s\n"
+                    + "Мощность двигателя - %d\n", model, power);
+            case 3 -> printInfo();
+        }
+    }
+
 }
