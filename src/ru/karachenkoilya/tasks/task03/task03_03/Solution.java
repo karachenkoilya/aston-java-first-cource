@@ -1,7 +1,5 @@
 package ru.karachenkoilya.tasks.task03.task03_03;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Arrays;
 
 import static ru.karachenkoilya.tasks.task03.task03_01.StringReader.readStrings;
