@@ -16,6 +16,6 @@ public class Solution {
                     }
                     return false;
                 })
-                .findFirst().ifPresent(System.out::println);
+                .findFirst().ifPresentOrElse(System.out::println, () -> System.out.println("Нет слов"));
     }
 }
