@@ -8,7 +8,7 @@ import static ru.karachenkoilya.tasks.task03.task03_01.StringReader.readStrings;
 
 public class Solution {
     public static void main(String[] args) {
-        var list = readStrings(1);
+        var list = readStrings(3);
 
         list.stream()
                 .flatMap(s -> Arrays.stream(s.split(" ")))
