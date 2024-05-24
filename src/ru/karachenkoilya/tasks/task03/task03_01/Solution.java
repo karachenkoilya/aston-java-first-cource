@@ -1,11 +1,11 @@
 package ru.karachenkoilya.tasks.task03.task03_01;
 
 import java.util.Comparator;
-import static ru.karachenkoilya.tasks.task03.task03_01.StringReader.getStrings;
+import static ru.karachenkoilya.tasks.task03.task03_01.StringReader.readStrings;
 
 public class Solution {
     public static void main(String[] args) {
-        var list = getStrings(3);
+        var list = readStrings(3);
 
         System.out.printf("The longest string is \"%s\"\n",
                 list.stream().max(Comparator.comparingInt(String::length)).get());
