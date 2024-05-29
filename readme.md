@@ -18,3 +18,11 @@
 ## Задание №3
 
 Посмотреть решение: [ссылка](src/ru/karachenkoilya/tasks/task03)
+
+## Задание №4
+
+---
+
+## Задание №3
+
+Посмотреть решение: [ссылка](src/ru/karachenkoilya/tasks/task05)
